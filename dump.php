@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $apiEndpoint = 'https://api.openai.com/v1/chat/completions';
-    $apiKey = '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'; // Replace with your actual API key
+    $apiKey = 'your_key_here'; // Replace with your actual API key
 
     // Retrieve user input from form
     $name = $_POST['name'];

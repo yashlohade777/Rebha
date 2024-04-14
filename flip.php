@@ -23,7 +23,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $apiEndpoint = 'https://api.openai.com/v1/chat/completions';
-    $apiKey = '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'; // Replace with your actual API key
+    $apiKey = 'youer_key_here'; // Replace with your actual API key
 
     // Retrieve user input from form
     $yourName = $_POST['yourName'];
@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $headers = array();
     $headers[] = 'Content-Type: application/json';
-    $headers[] = 'Authorization: Bearer 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';
+    $headers[] = 'Authorization: Bearer _your_key_here';
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $result = curl_exec($ch);

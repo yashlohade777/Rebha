@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     curl_close($chatCurl);
     
     $apiEndpointDallE = 'https://api.openai.com/v1/images/generations';
-    $apiKey = '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'; // Replace with your actual API key
+    $apiKey = 'yourkeyhere'; // Replace with your actual API key
 
     // Hard-coded prompt for DALL-E API request
     $dallEPrompt = $themedpromptfinal;
