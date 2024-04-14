@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    background-color: #fdbf00;
+}
+
+.card {
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: rotate(-5deg);
+}
+
+.card:hover .outside {
+    transform: rotateY(-130deg);
+}
+
+.outside,
+.inside {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50.1%;
+}
+
+.inside {
+    background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+    line-height: 3;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+    border: 5px solid #000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.outside {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.989);
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.front {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px solid #000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px solid #000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    overflow: hidden;
+    /* left: 50%; */
+}
+
+
+
+.outside p {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 6px;
+    color: #000046;
+}
+
+.back h1 {
+    font-size: 150px;
+    line-height: 150px;
+}
+
+.front h1 {
+    font-size: 150px;
+    line-height: 150px;
+}
+
+.element img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
